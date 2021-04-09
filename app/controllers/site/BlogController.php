@@ -2,7 +2,9 @@
 
 namespace app\controllers\site;
 
-class BlogController
+use app\controllers\BaseController;
+
+class BlogController extends BaseController
 {
 
   public function index()
