@@ -1,4 +1,11 @@
-<?php 
+<?php
+
+use app\classes\Template;
+
+$template = new Template;
+$twig = $template->init();
+
+dd($twig);
 
 /**
  * Chamando o controller digitado na url
@@ -12,3 +19,5 @@ $controller = new $calledController();
  */
 $callMethod = new app\controllers\Method;
 $method = $callMethod->method($controller);
+
+$controller->$method();

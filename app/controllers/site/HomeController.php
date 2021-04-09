@@ -2,11 +2,11 @@
 
 namespace app\controllers\site;
 
-class BlogController
+class HomeController
 {
 
   public function index()
   {
-    dd('BlogController -> index()');
+    dd('HomeController -> index()');
   }
 }
