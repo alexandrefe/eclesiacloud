@@ -7,6 +7,12 @@ $template = new Template;
 $twig = $template->init();
 
 /**
+ * Função que retorna a url atual
+ * utilizada nos href e src do html
+ */
+$twig->addFunction($site_url);
+
+/**
  * Chamando o controller digitado na url
  */
 $callController = new app\controllers\Controller;
