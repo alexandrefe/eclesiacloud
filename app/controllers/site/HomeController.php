@@ -2,11 +2,19 @@
 
 namespace app\controllers\site;
 
-class HomeController
+use app\controllers\BaseController;
+
+class HomeController extends BaseController
 {
 
   public function index()
   {
-    dd('HomeController -> index()');
+
+    $dataForTemplate = [
+      'title' => "Eclesiacloud - Gestão inteligente para igrejas"
+    ];
+
+    $template = $this->twig->load('home.site.twig');
+    $template->display($dataForTemplate);
   }
 }

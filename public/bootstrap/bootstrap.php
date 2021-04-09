@@ -5,14 +5,17 @@ use app\classes\Template;
 $template = new Template;
 $twig = $template->init();
 
-dd($twig);
-
 /**
  * Chamando o controller digitado na url
  */
 $callController = new app\controllers\Controller;
 $calledController = $callController->controller();
 $controller = new $calledController();
+
+/**
+ * Atribuindo o twig aos controllers
+ */
+$controller->setTwig($twig);
 
 /**
  * Chamando o método digitado na url
